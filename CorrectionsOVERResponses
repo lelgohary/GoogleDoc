@@ -1,0 +1,5 @@
+=if(
+iferror(concatenate($B$19,"9am")=vlookup(concatenate($B$19,"9am"),Corrections!J:J,1,false),"FALSE")
+=TRUE,
+sumif(Corrections!J:J,concatenate($B$19,"9am"),Corrections!I:I),
+sumif(Responses!H:H,concatenate($B$19,"9am"),Responses!G:G))
